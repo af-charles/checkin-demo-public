@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automated Check-In Demo | Ops Automation & Decision Analytics</title>
+  <meta name="description" content="Public project page linking to a password-protected live demo of an automated check-in system and operational summaries (synthetic data)." />
+
+  <meta property="og:title" content="Automated Check-In Demo | Ops Automation & Decision Analytics" />
+  <meta property="og:description" content="Public project page linking to a password-protected live demo (synthetic data)." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #0b1220;
+      color: #eaf0ff;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 28px;
+    }
+    h1 { margin-top: 0; font-size: 24px; }
+    p { line-height: 1.5; color: rgba(234,240,255,0.9); }
+    ul { padding-left: 18px; }
+    li { margin: 8px 0; }
+    .badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,211,107,0.15);
+      border: 1px solid rgba(255,211,107,0.35);
+      font-size: 13px;
+    }
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    a.button {
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: #eaf0ff;
+      color: #0b1220;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    a.secondary {
+      background: rgba(255,255,255,0.12);
+      color: #eaf0ff;
+    }
+    footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: rgba(234,240,255,0.65);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Automated Check-In System — Live Demo</h1>
+      <span class="badge">Password-protected demo</span>
+
+      <p>
+        This is a public project page for a functional demo that simulates an automated
+        check-in workflow and operational summaries used in guided tour operations.
+        The live demo is intentionally gated and built with synthetic data only.
+      </p>
+
+      <h3>What the demo demonstrates</h3>
+      <ul>
+        <li>Centralized automated check-in and guest validation</li>
+        <li>Guide-level operational views generated from a single source of truth</li>
+        <li>Real-time operational summaries for decision support</li>
+        <li>State-dependent business rules (e.g. operational constraints)</li>
+      </ul>
+
+      <div class="actions">
+        <a class="button" id="demoLink" href="#" target="_blank" rel="noopener">
+          Open live demo
+        </a>
+        <a class="button secondary" id="requestAccess" href="#">
+          Request access
+        </a>
+      </div>
+
+      <p style="margin-top:16px; font-size:13px;">
+        <strong>Note:</strong> LinkedIn does not accept password-protected links in the Projects section.
+        Use this public page as the project link and request access to view the live demo.
+      </p>
+
+      <footer>
+        <div>© <span id="year"></span> Charles Woedem Afeavo</div>
+        <div>Public wrapper · Live demo gated</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const DEMO_URL = "https://YOUR-SITE.netlify.app";
+    const EMAIL = "afwaedem99@gmail.com";
+
+    document.getElementById("demoLink").href = DEMO_URL;
+    document.getElementById("requestAccess").href =
+      "mailto:" + EMAIL +
+      "?subject=" + encodeURIComponent("Request access: Automated Check-In Demo") +
+      "&body=" + encodeURIComponent(
+        "Hi Charles,\n\nI’d like access to the password-protected demo for evaluation.\n\nThanks."
+      );
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
